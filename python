@@ -1,0 +1,35 @@
+# programming with pythin programming language is just too sweet
+# this is my practice assignment
+# learning from Bro Code 
+
+from tkinter import *
+
+choices = ["Travel", "Partying", "Sleeping"]
+def check():
+    if (x.get()) == 1:
+        print("you are in")
+    else:
+        print("you are out")
+
+window = Tk()
+x = IntVar()
+photo = PhotoImage(file='youtube-logo.png')
+# file = ("C:\\Users\\Lenovo\\Music\\Dj-Snake-Justin-Bieber-Let-Me-Love-You_2.mp3")
+
+check_button = Checkbutton(window, text="check me", font=('Arial',40,'bold'),
+                           variable=x,
+                           onvalue=1,
+                           offvalue=0,
+                           command=check,
+                           image=photo,
+                           compound='left',
+                           bg='grey',
+                           fg='orange',
+                           activebackground='grey',
+                           activeforeground='orange',
+                           padx=10,
+                           pady=10)
+check_button.pack()
+window.geometry("600x400")
+
+window.mainloop()
